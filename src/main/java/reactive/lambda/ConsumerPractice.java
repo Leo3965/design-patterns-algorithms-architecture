@@ -1,4 +1,4 @@
-package functional.programming;
+package reactive.lambda;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -6,7 +6,8 @@ import java.util.function.Consumer;
 public class ConsumerPractice {
     public static void main(String[] args) {
         var list = List.of(34, 67, 8, 23, 67, 879, 90);
-        Consumer<Integer> consumer = e -> System.out.println("e = " + e);
+//        Consumer<Integer> consumer = e -> System.out.println("e = " + e);
+        Consumer<Integer> consumer = System.out::println;
         printElements(list, consumer);
     }
 

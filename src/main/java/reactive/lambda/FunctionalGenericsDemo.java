@@ -1,4 +1,4 @@
-package functional.programming;
+package reactive.lambda;
 
 public class FunctionalGenericsDemo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package functional.programming;
+package reactive.lambda;
 
 import java.util.List;
 import java.util.function.UnaryOperator;

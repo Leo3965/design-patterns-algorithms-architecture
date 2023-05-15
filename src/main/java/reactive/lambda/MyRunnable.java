@@ -1,4 +1,4 @@
-package functional.programming;
+package reactive.lambda;
 
 public class MyRunnable implements Runnable {
     @Override

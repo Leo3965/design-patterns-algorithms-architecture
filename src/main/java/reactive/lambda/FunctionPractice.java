@@ -1,11 +1,12 @@
-package functional.programming;
+package reactive.lambda;
 
 import java.util.List;
 import java.util.function.Function;
 
 public class FunctionPractice {
     public static void main(String[] args) {
-        Function<String, Integer> fun = e -> e.length();
+//        Function<String, Integer> fun = e -> e.length();
+        Function<String, Integer> fun = String::length;
         var strList = List.of("Kit", "Kat", "Shake");
 
         List<Integer> newList = mapTo(strList, fun);

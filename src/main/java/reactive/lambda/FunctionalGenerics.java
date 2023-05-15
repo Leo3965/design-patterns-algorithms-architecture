@@ -1,4 +1,4 @@
-package functional.programming;
+package reactive.lambda;
 
 @FunctionalInterface
 public interface FunctionalGenerics<T, R> {
