@@ -13,7 +13,7 @@ public class HTMLButton implements Button {
 
     @Override
     public void onClick() {
-        System.out.println("Click! designpatterns.creationall.factorymethod.ui.Button says - 'Hello World!'");
+        System.out.println("Click! designpatterns.creationall.factorymethod.ui.Button says - 'HelloRxJava World!'");
     }
 
 }

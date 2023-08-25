@@ -16,7 +16,7 @@ public class InfiniteStreams {
 //                .forEach(System.out::println);
 
         // Infinte stream
-        Stream.generate(() -> "Hello").forEach(System.out::println);
+        Stream.generate(() -> "HelloRxJava").forEach(System.out::println);
         // Stream.generate(new Random() :: nextInt)
         // .forEach(System.out::println);
 

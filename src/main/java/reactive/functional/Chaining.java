@@ -9,7 +9,7 @@ public class Chaining {
         Consumer<String> c1 = System.out::println;
         Consumer<String> c2 = System.out::println;
 
-//        c1.accept("Hello");
+//        c1.accept("HelloRxJava");
 //        c2.accept("Java");
 
         Consumer<String> c3 = s -> {

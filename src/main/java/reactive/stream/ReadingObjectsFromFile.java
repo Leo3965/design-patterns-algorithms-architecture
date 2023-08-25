@@ -14,7 +14,7 @@ public class ReadingObjectsFromFile {
     public static void main(String[] args) {
 
         Path path = Paths.get("C:\\Users\\leonardo.freitas\\Documents\\workspace\\design-patterns-algorithms-architecture\\src\\main\\java\\reactive\\stream\\Books.txt");
-        try (Stream<String> lines = Files.lines(path);) {
+        try (Stream<String> lines = Files.lines(path)) {
 
             Spliterator<String> baseSpliterator = lines.spliterator();
             Spliterator<Book> spliterator = new BookSpliterator(baseSpliterator);
@@ -23,7 +23,7 @@ public class ReadingObjectsFromFile {
             stream.forEach(System.out::println);
 
         } catch (IOException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
 
     }

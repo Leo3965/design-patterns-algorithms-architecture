@@ -14,7 +14,7 @@ public class FlatMapOperation {
 	public static void main(String[] args) {
 
 
-		Stream<String> a = Stream.of("Hello ", "there! ");
+		Stream<String> a = Stream.of("HelloRxJava ", "there! ");
 		Stream<String> b = Stream.of("Learning", "Java? ");
 
 		Stream<Stream<String>> of = Stream.of(a, b);

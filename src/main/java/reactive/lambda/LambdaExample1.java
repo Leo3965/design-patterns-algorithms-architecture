@@ -4,7 +4,7 @@ public class LambdaExample1 {
 
     public static void main(String[] args) {
         lambda();
-        MyFuncInterface my = () -> System.out.println("Hello");
+        MyFuncInterface my = () -> System.out.println("HelloRxJava");
         my.myMethod();
     }
 
