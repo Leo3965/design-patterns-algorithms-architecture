@@ -11,3 +11,4 @@
 | mvn clean                                | Limpa a pasta target                       |
 | mvn test                                 | Realiza tests unitários                    |
 | mvn clean package -Dmaven.test.skip=true | Realiza o build sem testes                 |
+| mvn test jacoco:report                   | Relatório do Jacoco                        |

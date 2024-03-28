@@ -1,6 +1,6 @@
 ## Hierarquia de Testes
 
-![img](../../../../files/test.png)
+![img](../../../../files/imgs/test.png)
 
 - Testes manuais demoram e são chatos 
 - Agiliza o teste de uma aplicação
@@ -31,3 +31,11 @@
 
 ### Design Pattern Object Mother
  > Design muito utilizado em testes
+
+#### Ferramentas de análise de cobertura
+
+ - Intellij
+ - Jaccoco (Java Code Coverage Library)
+
+![img](../../../../files/imgs/analise-teste-unit.png)
+![img](../../../../files/imgs/metricas-relatorios-unit.png)
