@@ -2,6 +2,8 @@ package junit.projects.utilidade;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,5 +46,12 @@ class SaudacaoUtilTest {
     void saudarNaoDeveLancarException() {
         var horaValida = 0;
         assertDoesNotThrow(() -> SaudacaoUtil.saudar(horaValida));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {5, 6, 7, 8, 9, 10, 11})
+    void dadoHorarioMatinalEntaoDeveRetornarBomDia(int hora) {
+        var saudacao = SaudacaoUtil.saudar(hora);
+        assertEquals("Bom dia", saudacao, "Saudação incorreta!");
     }
 }
