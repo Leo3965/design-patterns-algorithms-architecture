@@ -15,3 +15,19 @@
 4. Self-validating: Testes devem ter autoavaliação
 5. Timely: Testes devem ser escritos junto ao desenvolvimento
 6. Thorough: Testes devem ser minuciosos
+
+### Padrão Triple A
+ - Arrange (Prepara)
+ - Act     (Executa)
+ - Assert  (Verifica)
+
+### Nomenclatura BDD
+ > Behaviour Driven Development
+  - Given
+  - When
+  - Then
+
+É uma boa prática seguir esse modelo ao nomear um test unitário
+
+### Design Pattern Object Mother
+ > Design muito utilizado em testes
