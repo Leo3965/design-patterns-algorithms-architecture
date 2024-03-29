@@ -1,5 +1,6 @@
 package junit.projects.utilidade;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +13,20 @@ class SaudacaoUtilTest {
     @DisplayName("Deveria retornar bom dia")
     void saudarDia() {
         var saudacao = SaudacaoUtil.saudar(9);
-        assertEquals("Bom dia", saudacao, "Saudação incorreta!");
+        var saudacaoCorreta = "Bom dia";
+
+        // JUnit
+        assertEquals(saudacaoCorreta, saudacao, "Saudação incorreta!");
+
+        // AssertJ
+        Assertions
+                .assertThat(saudacao)
+                .withFailMessage("Saudação incorreta!")
+                .isEqualTo(saudacaoCorreta);
+
+        Assertions.assertThat(saudacao)
+                .as("Validando se a saudação é %s", saudacaoCorreta)
+                .isEqualTo(saudacaoCorreta);
     }
 
     @Test
@@ -37,8 +51,18 @@ class SaudacaoUtilTest {
     @DisplayName("Deveria retornar exception com horas inválidas")
     void saudarDeveriaRetornarException() {
         var horaInvalida = -10;
+
+        // JUnit
         var ex = assertThrows(IllegalArgumentException.class, () -> SaudacaoUtil.saudar(horaInvalida));
         assertEquals("Hora inválida", ex.getMessage());
+
+        // AssertJ
+        var e = Assertions.catchThrowableOfType(() -> SaudacaoUtil.saudar(horaInvalida), IllegalArgumentException.class);
+        Assertions.assertThat(e).hasMessage("Hora inválida");
+
+        Assertions.assertThatThrownBy(() -> SaudacaoUtil.saudar(horaInvalida))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Hora inválida");
     }
 
     @Test
@@ -54,4 +78,6 @@ class SaudacaoUtilTest {
         var saudacao = SaudacaoUtil.saudar(hora);
         assertEquals("Bom dia", saudacao, "Saudação incorreta!");
     }
+
+
 }
