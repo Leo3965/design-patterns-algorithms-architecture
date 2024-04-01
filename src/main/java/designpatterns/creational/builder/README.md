@@ -12,5 +12,5 @@ Extract the object construction or **creation code** out of its own class and mo
 1. You can construct objects step-by-step, defer construction steps or run steps recursively.
 2. You can reuse the same construction code when building various representations of products.
 
-![builder](../../../files/imgs/builder.JPG)
-![car-builder](../../../files/imgs/car-builder.png)
+![car-builder](../../../../../../files/imgs/car-builder.png)
+![builder](../../../../../../files/imgs/builder.JPG)
