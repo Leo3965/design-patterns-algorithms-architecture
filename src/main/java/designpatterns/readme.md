@@ -21,3 +21,9 @@
     1. Observer
 
 ![factory](../../../../files/imgs/factory-method-alga.png)
+
+#### Proxy
+![proxy](../../../../files/imgs/proxy.png)
+Util quando um processo acessa muitos arquivos
+
+![observer](../../../../files/imgs/observer.png)
